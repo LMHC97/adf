@@ -1,9 +1,7 @@
-<em> TITULO </em>
-<em> CONTEXTO DEL PROYECTO </em>
+# TITULO
+## CONTEXTO DEL PROYECTO 
 
-
-<h1> Para comenzar, se hace la importación de librerías y módulos. Inicialmente, trabajaremos con pandas y csv: </h1>
-```
+### Para comenzar, se hace la importación de librerías y módulos. Inicialmente, trabajaremos con pandas y csv: </h1>
 import pandas as pd
 import csv
-```
+
