@@ -1,0 +1,9 @@
+TITULO
+CONTEXTO DEL PROYECTO
+
+
+**Para comenzar, se hace la importación de librerías y módulos. Inicialmente, trabajaremos con pandas y csv:**
+```
+import pandas as pd
+import csv
+```
