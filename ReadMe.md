@@ -331,21 +331,21 @@ ylim_min, ylim_max = 0, 6000
 ```
 - Se crean los histogramas en cada subplot con los límites establecidos y se personaliza color.
 ```
-axes[0].hist(df['vru_time'], bins=100, color= "#ef2b2d")
+axes[0].hist(df['vru_time'], bins=100, color= "#ef2b2d", edgecolor= 'black')
 axes[0].set_xlabel('Duración en VRU')
 axes[0].set_ylabel('Frecuencia')
 axes[0].set_title('Histograma de Duración en VRU')
 axes[0].set_xlim(xlim_min, xlim_max)
 axes[0].set_ylim(ylim_min, ylim_max)
 
-axes[1].hist(df['q_time'], bins=50, color="#66008c")
+axes[1].hist(df['q_time'], bins=50, color="#66008c", edgecolor= 'black')
 axes[1].set_xlabel('Duración en cola')
 axes[1].set_ylabel('Frecuencia')
 axes[1].set_title('Histograma de Duración en Cola')
 axes[1].set_xlim(xlim_min, xlim_max)
 axes[1].set_ylim(ylim_min, ylim_max)
 
-axes[2].hist(df['ser_time'], bins=100,color="#00c6b2")
+axes[2].hist(df['ser_time'], bins=100,color="#00c6b2", edgecolor= 'black')
 axes[2].set_xlabel('Duración en servicio')
 axes[2].set_ylabel('Frecuencia')
 axes[2].set_title('Histograma de Duración en servicio')
@@ -358,7 +358,8 @@ axes[2].set_ylim(ylim_min, ylim_max)
 plt.tight_layout()
 plt.show()
 ```
-![image](https://github.com/user-attachments/assets/73a06089-caa9-4d12-9bf6-0253e10fe767)
+![image](https://github.com/user-attachments/assets/2ca52444-e243-4dc4-90b7-97460d859946)
+
 
 ## Análisis de los Histogramas
 
