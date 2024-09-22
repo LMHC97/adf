@@ -360,4 +360,15 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/73a06089-caa9-4d12-9bf6-0253e10fe767)
 
+## Análisis de los Histogramas
 
+Los histogramas presentados ofrecen una visión general de la distribución de las duraciones en tres etapas de un proceso: VRU, cola y servicio. Cada histograma nos revela características particulares sobre estos tiempos.
+
+### Histograma de Duración en VRU:
+La distribución de las duraciones en VRU muestra una clara asimetría positiva, lo que significa que la mayoría de los procesos tienen duraciones relativamente cortas, pero existe una proporción considerable de procesos que se extienden por periodos mucho más largos. Esta cola larga a la derecha sugiere la presencia de valores atípicos o eventos que causan demoras significativas en esta etapa.
+
+### Histograma de Duración en Cola:
+El histograma de las duraciones en cola presenta una forma similar al anterior, con una ligera asimetría positiva. Sin embargo, se observa que la concentración de datos se desplaza hacia valores más bajos en comparación con el histograma de VRU. Esto indica que, en promedio, los tiempos de espera en cola son menores que las duraciones totales en el sistema.
+
+### Histograma de Duración en Servicio:
+La distribución de las duraciones en servicio también muestra una asimetría positiva, aunque en menor medida que las otras dos. La mayoría de los procesos tienen duraciones de servicio relativamente cortas, pero al igual que en VRU, existe una cola de eventos con duraciones más largas. En términos generales, las duraciones en servicio se sitúan entre las duraciones en VRU y en cola.
