@@ -223,7 +223,98 @@ df['vru_entry'] = df['vru_entry'].str.replace(r'\.', '', regex=True).astype(int)
 df['vru_exit']= df['vru_exit'].astype(int)
 df['vru_entry']= df['vru_entry'].astype(int)
 ```
-- Se calcula la columna "vru_time" restando los valores de "vru_exit" y "vru_entry"
+- Se calcula la columna "vru_time" restando los valores de "vru_exit" y "vru_entry". Esta columna tiene los valores en segundos.
 ```
 df['vru_time']= df['vru_exit']-df['vru_entry']
 ```
+- Se observan los datos, tipo de datos y un ejemplo de su contenido nuevamente.
+```
+df.head
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vru.line</th>
+      <th>call_id</th>
+      <th>customer_id</th>
+      <th>priority</th>
+      <th>type</th>
+      <th>date</th>
+      <th>vru_entry</th>
+      <th>vru_exit</th>
+      <th>q_start</th>
+      <th>q_exit</th>
+      <th>q_time</th>
+      <th>outcome</th>
+      <th>ser_start</th>
+      <th>ser_exit</th>
+      <th>ser_time</th>
+      <th>server</th>
+      <th>vru_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AA0101</td>
+      <td>33116</td>
+      <td>9664491.0</td>
+      <td>2</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>31</td>
+      <td>36</td>
+      <td>0:00:36</td>
+      <td>0:03:09</td>
+      <td>153</td>
+      <td>HANG</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>NO_SERVER</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AA0101</td>
+      <td>33117</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>3412</td>
+      <td>3423</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>HANG</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>NO_SERVER</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA0101</td>
+      <td>33118</td>
+      <td>27997683.0</td>
+      <td>2</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>65520</td>
+      <td>65526</td>
+      <td>6:55:26</td>
+      <td>6:55:43</td>
+      <td>17</td>
+      <td>AGENT</td>
+      <td>6:55:43</td>
+      <td>6:56:37</td>
+      <td>54</td>
+      <td>MICHAL</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
