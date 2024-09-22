@@ -143,86 +143,97 @@ df.head(3)
 </table>
 </div>
 
-- Se identifican las estadísticas descriptivas de la base de datos. Es importante considerar que sólo se toman en cuenta las columnas que contienen valor numérico.
+- Se identifican las estadísticas descriptivas relacionadas con las columnas que contienen duración del tiempo de la llamada, duración del tiempo que permanecen en cola y duración de la llamada en VRU.
 ```
-df.describe()
+(df ['vru_time'].describe())
 ```
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>call_id</th>
-      <th>priority</th>
       <th>vru_time</th>
-      <th>q_time</th>
-      <th>ser_time</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>count</th>
-      <td>54022.000000</td>
-      <td>54022.000000</td>
-      <td>54022.000000</td>
-      <td>54022.000000</td>
-      <td>54022.000000</td>
-    </tr>
+      <td> 54022.000000 </td>
+       </tr>
     <tr>
       <th>mean</th>
-      <td>28453.102717</td>
-      <td>0.803469</td>
-      <td>9.954259</td>
-      <td>52.952612</td>
-      <td>147.958887</td>
-    </tr>
+      <td> 147.958887 </td>
+      </tr>
     <tr>
-      <th>std</th>
-      <td>15705.557074</td>
-      <td>0.891397</td>
-      <td>32.911385</td>
-      <td>87.943279</td>
-      <td>220.784324</td>
-    </tr>
+      <th>std </th>
+      <td> 220.784324 </td>
+      </tr>
     <tr>
-      <th>min</th>
-      <td>1169.000000</td>
-      <td>0.000000</td>
-      <td>-334.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
+       <th>min </th>
+       <td> 0.000000 </td>
+       </tr>
     <tr>
-      <th>25%</th>
-      <td>14860.250000</td>
-      <td>0.000000</td>
-      <td>6.000000</td>
-      <td>0.000000</td>
-      <td>13.000000</td>
-    </tr>
+       <th>25%  </th>
+       <td> 13.000000 </td>
+       </tr>
+     <tr>
+       <th>50%  </th>
+       <td> 84.000000 </td>
+       </tr>
     <tr>
-      <th>50%</th>
-      <td>28458.500000</td>
-      <td>0.000000</td>
-      <td>6.000000</td>
-      <td>15.000000</td>
-      <td>84.000000</td>
-    </tr>
+       <th>75%  </th>
+       <td> 185.000000 </td>
+       </tr>
     <tr>
-      <th>75%</th>
-      <td>42061.750000</td>
-      <td>2.000000</td>
-      <td>10.000000</td>
-      <td>71.000000</td>
-      <td>185.000000</td>
+       <th>max  </th>
+       <td> 6454.000000 </td>
+       </tr>
+
+```
+(df ['q_time'].describe())
+```
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>q_time</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <th>max</th>
-      <td>55656.000000</td>
-      <td>2.000000</td>
-      <td>3639.000000</td>
-      <td>3164.000000</td>
-      <td>6454.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+      <th>count</th>
+      <td> 54022.000000 </td>
+       </tr>
+    <tr>
+      <th>mean</th>
+      <td> 52.952612 </td>
+      </tr>
+    <tr>
+      <th>std </th>
+      <td> 87.943279 </td>
+      </tr>
+    <tr>
+       <th>min </th>
+       <td> 0.000000 </td>
+       </tr>
+    <tr>
+       <th>25%  </th>
+       <td> 0.000000 </td>
+       </tr>
+     <tr>
+       <th>50%  </th>
+       <td> 15.000000 </td>
+       </tr>
+    <tr>
+       <th>75%  </th>
+       <td> 71.000000 </td>
+       </tr>
+    <tr>
+       <th>max  </th>
+       <td> 3164.000000 </td>
+       </tr>
+
+```
+(df ['ser_time'].describe())
+```
+
