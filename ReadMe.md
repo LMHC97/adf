@@ -209,4 +209,4 @@ df.head(3)
 </table>
 </div>
 
-- Ya que se identifican valores negativos en la columna VRU_time, indica que existen valores inválidos en esta tabla. Por ese motivo, se elimina la columna y se calcula restando VRU_entry a VRU_exit.
+- Ya que se identifican valores negativos en la columna VRU_time, indica que existen valores inválidos en esta tabla. Por ese motivo, se elimina la columna y se calcula restando VRU_entry a VRU_exit. Por cuestiones de tiempo y habilidades propias, esto se hizo en PowerBI en vez de Python. (no recordaba como se hacia y ya tengo sueño)
