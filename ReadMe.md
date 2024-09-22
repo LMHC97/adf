@@ -209,4 +209,21 @@ df.head(3)
 </table>
 </div>
 
-- Ya que se identifican valores negativos en la columna VRU_time, indica que existen valores inválidos en esta tabla. Por ese motivo, se elimina la columna y se calcula restando VRU_entry a VRU_exit. Por cuestiones de tiempo y habilidades propias, esto se hizo en PowerBI en vez de Python. (no recordaba como se hacia y ya tengo sueño)
+- Ya que se identifican valores negativos en la columna VRU_time, indica que existen valores inválidos en esta tabla. Por ese motivo, se elimina la columna y se calcula restando VRU_entry a VRU_exit.
+
+- Para lograrlo, se debe cambiar el delimitador de los valores de la columna de ':' a '.'
+```
+df['vru_exit'] = df['vru_exit'].str.replace(':','.')
+df['vru_entry'] = df['vru_entry'].str.replace(':','.')
+df['vru_exit'] = df['vru_exit'].str.replace(r'\.', '', regex=True).astype(int)
+df['vru_entry'] = df['vru_entry'].str.replace(r'\.', '', regex=True).astype(int)
+```
+- Luego se castea el tipo de valor de la columna de string a int. 
+```
+df['vru_exit']= df['vru_exit'].astype(int)
+df['vru_entry']= df['vru_entry'].astype(int)
+```
+- Se calcula la columna "vru_time" restando los valores de "vru_exit" y "vru_entry"
+```
+df['vru_time']= df['vru_exit']-df['vru_entry']
+```
