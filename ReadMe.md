@@ -21,8 +21,10 @@ Para ello, se propone que definamos los KPIs adecuados para poder medir los obje
 - ¿Cuáles son los tipos de servicio más recurrentes?
 - ¿Podemos estimar la dotación necesaria para cumplir con una calidad de servicio determinada?  Ejemplo: si quiero que mi tiempo promedio de espera sea menor a 60 segundos?
 ### Para comenzar, se hace la importación de librerías y módulos. Inicialmente, trabajaremos con pandas y csv:
+```
 import pandas as pd
 import csv
+```
 ## Se importa el CSV que contiene los datos que serán limpiados y posteriormente analizados:
 ```
 df = pd.read_csv('Call_Center_1999_DataSet.csv', delimiter=';', encoding='UTF-8') 
