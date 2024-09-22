@@ -49,4 +49,178 @@ df.drop(df[df['outcome']=='PHANTOM'].index,inplace=True)
 df.to_csv('callcentercorregido.csv', index=False, sep= ';')
 ```
 ### Análisis Exploratorio de Datos (EDA)
-- 
+- Se observan los datos, tipo de datos y un ejemplo de su contenido.
+```
+df.head(3)
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vru.line</th>
+      <th>call_id</th>
+      <th>customer_id</th>
+      <th>priority</th>
+      <th>type</th>
+      <th>date</th>
+      <th>vru_entry</th>
+      <th>vru_exit</th>
+      <th>vru_time</th>
+      <th>q_start</th>
+      <th>q_exit</th>
+      <th>q_time</th>
+      <th>outcome</th>
+      <th>ser_start</th>
+      <th>ser_exit</th>
+      <th>ser_time</th>
+      <th>server</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AA0101</td>
+      <td>33116</td>
+      <td>9664491.0</td>
+      <td>2</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>0:00:31</td>
+      <td>0:00:36</td>
+      <td>5</td>
+      <td>0:00:36</td>
+      <td>0:03:09</td>
+      <td>153</td>
+      <td>HANG</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>NO_SERVER</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>AA0101</td>
+      <td>33117</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>0:34:12</td>
+      <td>0:34:23</td>
+      <td>11</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>HANG</td>
+      <td>0:00:00</td>
+      <td>0:00:00</td>
+      <td>0</td>
+      <td>NO_SERVER</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AA0101</td>
+      <td>33118</td>
+      <td>27997683.0</td>
+      <td>2</td>
+      <td>PS</td>
+      <td>1999-01-01</td>
+      <td>6:55:20</td>
+      <td>6:55:26</td>
+      <td>6</td>
+      <td>6:55:26</td>
+      <td>6:55:43</td>
+      <td>17</td>
+      <td>AGENT</td>
+      <td>6:55:43</td>
+      <td>6:56:37</td>
+      <td>54</td>
+      <td>MICHAL</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+- Se identifican las estadísticas descriptivas de la base de datos. Es importante considerar que sólo se toman en cuenta las columnas que contienen valor numérico.
+```
+df.describe()
+```
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>call_id</th>
+      <th>priority</th>
+      <th>vru_time</th>
+      <th>q_time</th>
+      <th>ser_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>54022.000000</td>
+      <td>54022.000000</td>
+      <td>54022.000000</td>
+      <td>54022.000000</td>
+      <td>54022.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>28453.102717</td>
+      <td>0.803469</td>
+      <td>9.954259</td>
+      <td>52.952612</td>
+      <td>147.958887</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>15705.557074</td>
+      <td>0.891397</td>
+      <td>32.911385</td>
+      <td>87.943279</td>
+      <td>220.784324</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1169.000000</td>
+      <td>0.000000</td>
+      <td>-334.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>14860.250000</td>
+      <td>0.000000</td>
+      <td>6.000000</td>
+      <td>0.000000</td>
+      <td>13.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>28458.500000</td>
+      <td>0.000000</td>
+      <td>6.000000</td>
+      <td>15.000000</td>
+      <td>84.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>42061.750000</td>
+      <td>2.000000</td>
+      <td>10.000000</td>
+      <td>71.000000</td>
+      <td>185.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>55656.000000</td>
+      <td>2.000000</td>
+      <td>3639.000000</td>
+      <td>3164.000000</td>
+      <td>6454.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
