@@ -143,7 +143,7 @@ df.head(3)
 </table>
 </div>
 
-- Se identifican las estadísticas descriptivas relacionadas con las columnas que contienen duración del tiempo de la llamada, duración del tiempo que permanecen en cola y duración de la llamada en VRU.
+- Se identifican las estadísticas descriptivas relacionadas con la columna que contiene duración de la llamada en VRU.
 ```
 (df ['vru_time'].describe())
 ```
@@ -187,11 +187,12 @@ df.head(3)
        <th>max  </th>
        <td> 6454.000000 </td>
        </tr>
+</table>
+- Se identifican las estadísticas descriptivas relacionadas con la columna que contiene duración del tiempo que permanecen en cola.
 
 ```
 (df ['q_time'].describe())
 ```
-
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -232,8 +233,50 @@ df.head(3)
        <th>max  </th>
        <td> 3164.000000 </td>
        </tr>
+</table>
+- Se identifican las estadísticas descriptivas relacionadas con la columna que contiene duración del tiempo de la llamada.
 
 ```
 (df ['ser_time'].describe())
 ```
-
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>q_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td> 54022.000000 </td>
+       </tr>
+    <tr>
+      <th>mean</th>
+      <td> 147.958887 </td>
+      </tr>
+    <tr>
+      <th>std </th>
+      <td> 220.784324 </td>
+      </tr>
+    <tr>
+       <th>min </th>
+       <td> 0.000000 </td>
+       </tr>
+    <tr>
+       <th>25%  </th>
+       <td> 13.000000 </td>
+       </tr>
+     <tr>
+       <th>50%  </th>
+       <td> 84.000000 </td>
+       </tr>
+    <tr>
+       <th>75%  </th>
+       <td> 185.000000 </td>
+       </tr>
+    <tr>
+       <th>max  </th>
+       <td> 6454.000000 </td>
+       </tr>
+</table>
