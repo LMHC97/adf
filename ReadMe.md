@@ -188,6 +188,7 @@ df.head(3)
        <td> 6454.000000 </td>
        </tr>
 </table>
+
 - Se identifican las estadísticas descriptivas relacionadas con la columna que contiene duración del tiempo que permanecen en cola.
 
 ```
@@ -234,6 +235,7 @@ df.head(3)
        <td> 3164.000000 </td>
        </tr>
 </table>
+
 - Se identifican las estadísticas descriptivas relacionadas con la columna que contiene duración del tiempo de la llamada.
 
 ```
